@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
+import GlobalStyle from './globalStyles.js';
 
 import CargarTurnos from './pages/CargarTurnos.js'
 import Login from './pages/Login.js'
@@ -46,6 +45,7 @@ const DebugMenu = styled.section`
 export default function App() {
   return (
     <Router>
+        <GlobalStyle />
       <div>
         <DebugMenu>
           <ul>
