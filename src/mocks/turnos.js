@@ -14,7 +14,7 @@ export const turnos = [
         consultorio: 1
     },
     {
-        id: 'USX235',
+        id: 'USX215',
         paciente: 'Carlos Gomez',
         doctor: 'Dr. Pigni',
         fecha: Date.now(),
