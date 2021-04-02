@@ -12,11 +12,42 @@ import {
   Link
 } from "react-router-dom";
 
+import styled from 'styled-components';
+
+const DebugMenu = styled.section`
+  position: absolute;
+  z-index: 100;
+  top: 2vh;
+  left: 2vw;
+  opacity: .25;
+  background: #fff;
+  color: #333;
+  border: 1px solid #111;
+  padding: 2vw;
+  border-radius: 2px;
+  transition: .2s ease all;
+  &:hover{
+    opacity: 1;
+    transition: .2s ease all;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+      a{
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+`;
+
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+        <DebugMenu>
           <ul>
             <li>
               <Link to="/">login</Link>
@@ -28,7 +59,7 @@ export default function App() {
               <Link to="/cargar">cargar</Link>
             </li>
           </ul>
-        </nav>
+        </DebugMenu>
 
         {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
